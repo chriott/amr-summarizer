@@ -1,3 +1,3 @@
-# amr-summarizer
+# AMR Software project
 
-hallo welt 
+End-to-end summarization model based on AMR
