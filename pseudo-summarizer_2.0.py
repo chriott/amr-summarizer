@@ -3,7 +3,7 @@ import re
 import amrlib
 import random
 
-def pseudo_summarizer(file):
+def pseudo_summarizer(file, option='random', summary_length=4):
 	"""
 	Takes a file of sentences as input, converts each sentence to a single-line AMR,
 	randomly selects four AMRs, and from these creates a pseudo-multi-sentence AMR.
@@ -14,7 +14,7 @@ def pseudo_summarizer(file):
 		sentences = [sentence.rstrip() for sentence in f.readlines()]
 
 	# Load AMR parser
-	p = '/Users/jackweyen/Desktop/Saarland/Semester I/AMR/Summarization Nation/model_parse_spring-v0_1_0'
+	p = 'model_parse_spring-v0_1_0'
 	stog = amrlib.load_stog_model(model_dir=p)
 
 	# Convert each sentence to a list of multi-line AMRs
@@ -29,19 +29,33 @@ def pseudo_summarizer(file):
 		AMR = re.sub(r"""\n""", r""" """, AMR)
 		AMRs.append(AMR)
 
-	# If number of AMRs greater than four, select four AMRs at random
+	# If number of AMRs greater than target summary length, select n AMRs at random
 	# otherwise, pass on list of AMRs unchanged
-	if len(AMRs) > 4:
-		random_AMRs = random.choices(AMRs, k = 4)
-	else:
-		random_ARMs = AMRs
+	if option == 'random':
+		if len(AMRs) > int(summary_length):
+			summary_AMRs = random.choices(AMRs, k = int(summary_length))
+		else:
+			summary_ARMs = AMRs
+
+	# If number of AMRs greater than target summary length, select first n AMRs
+	# otherwise, pass on list of AMRs unchanged
+	if option == 'first':
+		if len(AMRs) > int(summary_length):
+			summary_AMRs = AMRs[:int(summary_length)]
+		else:
+			summary_AMRs = AMRs
 
 	# Convert to multi-sentence AMR
 	# TODO
-	MSAMR = "\n".join(AMRs)
+	MSAMR = "\n".join(summary_AMRs)
 
 	# Create output file
 	with open("output.txt", "w") as o:
 		o.write(MSAMR)
 
-pseudo_summarizer("input.txt")
+
+if __name__ == '__main__':
+	# TODO add sys.argv structure
+	# options for argument 2: 'random', 'first'
+	# options for argument 3: any integer
+	pseudo_summarizer("input.txt", 'first', '2')
