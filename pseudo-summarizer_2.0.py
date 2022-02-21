@@ -21,7 +21,7 @@ def pseudo_summarizer(file, option='random_select', summary_length=4):
 
 	#Load amrlib models for parsing and generation
 	p = 'model_parse_spring-v0_1_0'
-	g = 'model_generate_t5-v0_1_0'
+	g = 'model_generate_t5wtense-v0_1_0'
 	stog = amrlib.load_stog_model(model_dir=p)
 	gtos = amrlib.load_gtos_model(model_dir=g)
 	print('loading models done')
@@ -39,6 +39,10 @@ def pseudo_summarizer(file, option='random_select', summary_length=4):
 		AMR = re.sub(r"""\n""", r""" """, AMR)
 		AMRs.append(AMR)
 	print('single line conversion done')
+
+	# TODO: remove print lines
+	print('summary_length:\t', int(summary_length))
+	print('len(AMRs):\t', len(AMRs))
 
 	# PSEUDO SUMMARIZATION
 	# If number of AMRs greater than target summary length, select n AMRs at random
@@ -79,7 +83,7 @@ def pseudo_summarizer(file, option='random_select', summary_length=4):
 
 	# Create output file with generated sentences
 	# TODO: apply spacy to separate sentences
-	with open("output3.txt", "w") as o2:
+	with open("output.txt", "w") as o2:
 		o2.writelines(sents)
 		print('writing done')
 
