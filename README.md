@@ -42,3 +42,5 @@ With this input, the program:
   3) selects a number of AMRs, depending on the selected model, 
   4) from these creates a pseudo-multi-sentence AMR, 
   5) and generates a summary from that, using T5wtense (based on the T5 transformer from [Huggingface](https://github.com/huggingface/transformers))
+
+The summary is written to a text file (output.txt).
