@@ -1,6 +1,6 @@
 # AMR Software project
 
-This is a end-to-end summarization model based on AMR.
+This is an end-to-end summarization model based on AMR.
 
 Before running, one needs the latest install the following dependency:
 
@@ -11,6 +11,11 @@ As input, this summarizer takes a file of English sentences on separate lines.
 There are also options to specify if you prefer sentences to be selected in order
 starting from the beginning, rather than randomly, as well as how many sentences 
 you wish to use in your summary.
+
+Example commandline prompt:
+```
+python pseudo-summarizer.py input.txt first 2
+```
 
 With this input, the program:
   1) parses them to sentence AMRs using SPRING, 
