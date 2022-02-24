@@ -22,4 +22,4 @@ With this input, the program:
   2) converts each AMR to a single-line AMR, 
   3) selects a number of AMRs, depending on the selected model, 
   4) from these creates a pseudo-multi-sentence AMR, 
-  5) and generates a summary from that, again using SPRING
+  5) and generates a summary from that, using T5wtense (based on the T5 transformer from [Huggingface](https://github.com/huggingface/transformers))
