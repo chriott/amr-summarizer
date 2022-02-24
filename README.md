@@ -22,8 +22,8 @@ pip3 install amrlib
 
 | Name              	| Version 	| Date       	| Size  	| Score       	| DL 	|
 |-------------------	|---------	|------------	|-------	|-------------	|----	|
-| parse_spring      	| 0.1.0   	| 2021-11-25 	| 1.5GB 	| 83.5 SMATCH 	|      	| [Link](https://github.com/bjascob/amrlib-models/releases/download/model_parse_spring-v0_1_0/model_parse_spring-v0_1_0.tar.gz)   	|
-| generate_t5wtense 	| 0.1.0   	| 2020-12-30 	| 787MB 	| 54/44 BLEU  	|      	|  [Link](https://github.com/bjascob/amrlib-models/releases/download/model_generate_t5wtense-v0_1_0/model_generate_t5wtense-v0_1_0.tar.gz)  	|
+| parse_spring      	| 0.1.0   	| 2021-11-25 	| 1.5GB 	| 83.5 SMATCH 	| [Link](https://github.com/bjascob/amrlib-models/releases/download/model_parse_spring-v0_1_0/model_parse_spring-v0_1_0.tar.gz)   	|
+| generate_t5wtense 	| 0.1.0   	| 2020-12-30 	| 787MB 	| 54/44 BLEU  	| [Link](https://github.com/bjascob/amrlib-models/releases/download/model_generate_t5wtense-v0_1_0/model_generate_t5wtense-v0_1_0.tar.gz)  	|
 
 Extract both models into the amr-summarizer-folder 
 
