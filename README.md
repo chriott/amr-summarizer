@@ -11,7 +11,6 @@ you wish to use in your summary.
 
 ### Requirements
 
-Should work on Python version 3.8 and 3.9
 Before running, one needs the latest install the following dependencies:
 
 - amrlib
@@ -32,6 +31,10 @@ Example commandline prompt:
 ```
 python pseudo-summarizer.py input.txt first 2
 ```
+Argument 2 is a .txt file containing English sentences.
+Argument 3 can be 'first' or 'random_select'. If you choose 'first', the generator will output the first n sentences as a summary, and if you choose 'random_select', the generator will choose n random sentences from the input text file as a summary.
+Argument 4 represents the number of sentences your summary should contain.
+
 
 With this input, the program:
   1) parses them to sentence AMRs using SPRING, 
