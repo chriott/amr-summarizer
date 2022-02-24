@@ -11,6 +11,7 @@ you wish to use in your summary.
 
 ### Requirements
 
+Should work on Python version 3.8 and 3.9
 Before running, one needs the latest install the following dependencies:
 
 - amrlib
