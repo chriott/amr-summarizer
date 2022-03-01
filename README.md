@@ -11,7 +11,7 @@ you wish to use in your summary.
 
 ### Requirements
 
-Before running, one needs the latest install the following dependencies:
+Before running, one needs to install the following dependencies:
 
 - amrlib
 ```
