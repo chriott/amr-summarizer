@@ -13,12 +13,12 @@ you wish to use in your summary.
 
 Before running, one needs to install the following dependencies:
 
-- amrlib
+1) amrlib
 ```
 pip3 install amrlib
 ```
 
-- The pretrained spring parser and generator model. Extract the following models into the amr-summarizer folder
+2) The pretrained spring parser and generator model. Extract the following models into the amr-summarizer folder
 
 | Name              	| Version 	| Date       	| Size  	| Score       	| DL 	|
 |-------------------	|---------	|------------	|-------	|-------------	|----	|
@@ -26,7 +26,7 @@ pip3 install amrlib
 | generate_t5wtense 	| 0.1.0   	| 2020-12-30 	| 787MB 	| 54/44 BLEU  	| [Link](https://github.com/bjascob/amrlib-models/releases/download/model_generate_t5wtense-v0_1_0/model_generate_t5wtense-v0_1_0.tar.gz)  	|
 
 
-- [amr_coref](https://github.com/bjascob/amr_coref)
+3) [amr_coref](https://github.com/bjascob/amr_coref)
 
 Currently, there is no pip install of amr_coref so you have to clone it
 ```
