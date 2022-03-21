@@ -28,6 +28,14 @@ pip3 install amrlib
 
 - [amr_coref](https://github.com/bjascob/amr_coref)
 
+Currently, there is no pip install of amr_coref so you have to clone it
+```
+git clone 
+```
+The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_coref/releases)
+To use the model create a data ```directory``` and un-tar the model in it.
+The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_coref/releases)
+
 
 ### Usage
 
