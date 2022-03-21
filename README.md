@@ -34,6 +34,11 @@ git clone https://github.com/bjascob/amr_coref.git
 ```
 The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_coref/releases). To use the model create a ```data``` directory and un-tar the model in it.
 
+4) install penman library
+```
+pip install penman
+```
+
 ### Usage
 
 Example commandline prompt:
