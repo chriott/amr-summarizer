@@ -45,7 +45,7 @@ The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_co
 
 ### Usage
 
-# Running summarizer.py
+#### Running summarizer.py
 
 To run summarizer.py, simply run the script with the file containing the text you would like to summarize as an argument:
 ```
@@ -66,7 +66,7 @@ You will then be asked to choose how many sentences the summary should contain. 
 The summary will then be written to a file called 'summary.txt', which should appear in the folder containing your summarizer.py file.
 
 
-# Running eval.py
+#### Running eval.py
 
 
 To run eval.py, run the script with AMR bank proxy report file as an argument. We have included two compatible files, _ and _ , which can be used for this task:
