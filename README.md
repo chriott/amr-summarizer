@@ -4,9 +4,9 @@
 
 This is an end-to-end AMR-based summarization model. It was created as part of the software project "Applications for AMR" by Lucia Donatelli at Saarland University.
 
-There are two files which each contain all versions of the summarization models: summarizer.py and eval.py. 
-The implementation in summarizer.py is suitable for practical purposes, and the implementation in eval.py is used to evaluate the quality of the summarization models.
-As input, summarizer.py takes a .txt file containing an English text with each sentence on a separate line. It summarizes this text and outputs the summary into a file with the name 'summary.txt'. 
+There are two files which each contain all versions of the summarization models: baseline.py and eval.py. 
+The implementation in baseline.py is suitable for practical purposes, and the implementation in eval.py is used to evaluate the quality of the summarization models.
+As input, baseline.py takes a .txt file containing an English text with each sentence on a separate line. It summarizes this text and outputs the summary into a file with the name 'summary.txt'. 
 eval.py takes a file from the proxy report section of the AMR bank corpus, which includes several news reports and their corresponding gold standard summary. It extracts and generates a summary of each news report, and then evaluates the quality of the generated summary compared to the gold standard. We use ROUGE-1, ROUGE-2 and ROUGE-L as our evaluation metrics. An evaluation of each summary is printed to the console, as well as the average scores over the whole corpus.
 
 There are several versions of the model. You will be prompted to choose between them when running the python script. The baseline model works by choosing n sentences from the original text and using these as the summary. In this version, you can have the model use either the first n sentences or choose n random sentences to use for the summary. You will also be prompted to choose the length of the summary in number of sentences.
@@ -24,7 +24,7 @@ pip3 install amrlib
 ```
 pip install penman
 ```
-3) The pretrained spring parser and generator model. Download and un-tar the following models into the amr-summarizer folder, or into the folder containing the summarizer.py file.
+3) The pretrained spring parser and generator model. Download and un-tar the following models into the amr-summarizer folder, or into the folder containing the baseline.py file.
 
 | Name              	| Version 	| Date       	| Size  	| Score       	| DL 	|
 |-------------------	|---------	|------------	|-------	|-------------	|----	|
@@ -45,11 +45,11 @@ The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_co
 
 ### Usage
 
-#### Running summarizer.py
+#### Running baseline.py
 
-To run summarizer.py, simply run the script with the file containing the text you would like to summarize as an argument:
+To run baseline.py, simply run the script with the file containing the text you would like to summarize as an argument:
 ```
-python summarizer.py textfile.txt
+python baseline.py textfile.txt
 ```
 You will be prompted to choose which version of the summarization model to use. Simply enter 'baseline' into the command prompt:
 ```
@@ -63,7 +63,7 @@ You will then be asked to choose how many sentences the summary should contain. 
 ```
 2
 ```
-The summary will then be written to a file called 'summary.txt', which should appear in the folder containing your summarizer.py file.
+The summary will then be written to a file called 'summary.txt', which should appear in the folder containing your baseline.py file.
 
 
 #### Running eval.py
