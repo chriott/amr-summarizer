@@ -69,7 +69,12 @@ The summary will then be written to a file called 'summary.txt', which should ap
 #### Running eval.py
 
 
-To run eval.py, run the script with AMR bank proxy report file as an argument. We have included two compatible files, _ and _ , which can be used for this task:
+To run eval.py, first install the ROUGE code. 
+```
+pip install rouge_score
+``
+
+Then run the script with AMR bank proxy report file as an argument. We have included two compatible files, _ and _ , which can be used for this task:
 ```
 python eval.py amr-release-3.0-amrs-proxy.txt
 ```
