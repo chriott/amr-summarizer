@@ -74,7 +74,7 @@ def eval(corpus):
                          total_rouge_2["precision"] += metrics[0]
                          total_rouge_2["recall"] += metrics[1]
                          total_rouge_2["fscore"] += metrics[2]
-                    elif rouge == 'rougel':
+                    elif rouge == 'rougeL':
                          total_rouge_l["precision"] += metrics[0]
                          total_rouge_l["recall"] += metrics[1]
                          total_rouge_l["fscore"] += metrics[2]
