@@ -1,4 +1,5 @@
 import re
+import random
 
 def extract_summaries(file):
 	"""
@@ -70,6 +71,14 @@ def extract_summaries(file):
 
 	return output
 
-output = extract_summaries("amr-release-3.0-amrs-proxy.txt")
+def sample_human_eval(num_of_texts=5, out_file="human_eval_gold.txt"):
+	output = extract_summaries("amr-release-3.0-amrs-test-proxy.txt")
+	sample = random.sample(output, k=num_of_texts)
+	with open(out_file, "w", encoding="utf-8") as of:
+		for item in sample:
+			of.write("::"+str(output.index(item) + 1) + "\n")
+			of.write(item[0]+"\n")
+			of.write("::summary\n")
+			of.write(item[1]+"\n")
 
-
+output = extract_summaries('amr-release-3.0-amrs-proxy.txt')
