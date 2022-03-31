@@ -71,9 +71,13 @@ def extract_summaries(file):
 
 	return output
 
+# Sample a number of texts and summaries from the Proxy Report test set
+# for human evaluation and output them to a file
 def sample_human_eval(num_of_texts=5, out_file="human_eval_gold.txt"):
+
 	output = extract_summaries("amr-release-3.0-amrs-test-proxy.txt")
 	sample = random.sample(output, k=num_of_texts)
+
 	with open(out_file, "w", encoding="utf-8") as of:
 		for item in sample:
 			of.write("::"+str(output.index(item) + 1) + "\n")
