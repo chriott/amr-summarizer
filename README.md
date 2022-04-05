@@ -102,6 +102,6 @@ Our baseline model achieves these results:
 | Random/first              	| n 	| ROUGE-1       	| ROUGE-2  	| ROUGE-L      	|
 |-------------------	|---------	|------------	|-------	|-------------	|
 | first   	| 1  	| precision: 0.3596 recall: 0.3563 fscore: 0.3378 	| precision: 0.2007 recall: 0.2078 fscore: 0.1925 	| precision: 0.3052 recall: 0.3057 fscore: 0.2880	|
-| first 	|  2  	| precision: 0.5134295535783602 recall: 0.2922640833482608 fscore: 0.3536973184879049 	| precision: 0.3021133044091897 recall: 0.16534493999715852 fscore: 0.20348664673386246 	| precision: 0.42859364283633505 recall: 0.24175745903274085 fscore: 0.2937186962998461  	| 
-| random | 1 |  precision: 0.19645954485598133 recall: 0.25259787853518767 fscore: 0.20377258594939682 | precision: 0.04888224228904831 recall: 0.0761971344662258 fscore: 0.05554756107463649 | precision: 0.15321711957485049 recall: 0.20229340192983042 fscore: 0.16037338103778664 |
-| random | 2 | precision: 0.3059541027451456 recall: 0.18754491998890938 fscore: 0.22032649238043764 | precision: 0.09670580285890461 recall: 0.058506906893058756 fscore: 0.06856845846978386 | precision: 0.22585235283611899 recall: 0.1364586697629532 fscore: 0.16077425702353496 |
+| first 	|  2  	| precision: 0.5134 recall: 0.2922 fscore: 0.3536 	| precision: 0.3021 recall: 0.1653 fscore: 0.2034 	| precision: 0.4285 recall: 0.2417 fscore: 0.2937  	| 
+| random | 1 |  precision: 0.1964 recall: 0.2525 fscore: 0.2037 | precision: 0.0488 recall: 0.0761 fscore: 0.0555 | precision: 0.1532 recall: 0.2022 fscore: 0.1603 |
+| random | 2 | precision: 0.3059 recall: 0.1875 fscore: 0.2203 | precision: 0.0967 recall: 0.0585 fscore: 0.0685 | precision: 0.2258 recall: 0.1364 fscore: 0.1607 |
