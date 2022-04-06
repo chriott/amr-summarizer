@@ -1,0 +1,291 @@
+# ::cluster_id 2 ::id 12
+# ::snt Government sources said on January 7, 2002 that a united nation nuclear team will make a week-long visit to North Korea this weekend to inspect the Stalinist state's controversial nuclear site.
+(z1 / say-01
+      :ARG0 (z2 / source
+            :mod (z3 / government-organization
+                  :ARG0-of (z4 / govern-01)))
+      :ARG1 (z5 / visit-01
+            :ARG0 (z6 / team
+                  :mod (z7 / nucleus)
+                  :mod (z8 / organization
+                        :name (z9 / name
+                              :op1 "United"
+                              :op2 "Nations")))
+            :ARG1 (z10 / country
+                  :name (z11 / name
+                        :op1 "North"
+                        :op2 "Korea"))
+            :time (z12 / weekend
+                  :mod (z13 / this))
+            :purpose (z14 / inspect-01
+                  :ARG0 z6
+                  :ARG1 (z15 / site
+                        :mod z7
+                        :mod (z16 / controversy)
+                        :poss (z17 / state
+                              :mod (z18 / person
+                                    :name (z19 / name
+                                          :op1 "Stalin")))))
+            :ARG1-of (z20 / long-03
+                  :ARG2 (z21 / temporal-quantity
+                        :quant 1
+                        :unit (z22 / week)))))
+
+# ::cluster_id 2 ::id 13
+# ::snt  The upcoming visit is viewed as part of the International Atomic Energy Agency (IAEA) drive to clarify North Korea's nuclear ambitions.
+(z1 / view-02
+      :ARG1 (z2 / visit-01
+            :ARG1-of (z3 / come-01))
+      :ARG2 (z4 / have-part-91
+            :ARG1 (z5 / drive-04
+                  :ARG0 (z6 / organization
+                        :name (z7 / name
+                              :op1 "International"
+                              :op2 "Atomic"
+                              :op3 "Energy"
+                              :op4 "Agency"))
+                  :ARG1 (z8 / clarify-10
+                        :ARG0 z6
+                        :ARG1 (z9 / ambition
+                              :mod (z10 / nucleus)
+                              :poss (z11 / country
+                                    :name (z12 / name
+                                          :op1 "North"
+                                          :op2 "Korea")))))))
+
+# ::cluster_id 2 ::id 14
+# ::snt  A government source stated the visit by a group of IAEA safety experts is scheduled to last for a week beginning January 12, 2002.
+(z1 / state-01
+      :ARG0 (z2 / source
+            :mod (z3 / government-organization
+                  :ARG0-of (z4 / govern-01)))
+      :ARG1 (z5 / schedule-01
+            :ARG1 (z6 / visit-01
+                  :ARG0 (z7 / group
+                        :consist-of (z8 / person
+                              :ARG1-of (z9 / expert-01
+                                    :ARG2 (z10 / safe-01))
+                              :ARG0-of (z11 / have-org-role-91
+                                    :ARG1 (z12 / organization
+                                          :name (z13 / name
+                                                :op1 "IAEA")))))))
+      :ARG2 (z14 / last-01
+            :ARG1 z6
+            :ARG2 (z15 / temporal-quantity
+                  :quant 1
+                  :unit (z16 / week)
+                  :ARG1-of (z17 / begin-01
+                        :time (z18 / date-entity
+                              :year 2002
+                              :month 1
+                              :day 12)))))
+
+# ::cluster_id 2 ::id 15
+# ::snt  The source stated that the inspection would focus on an isotope production laboratory in the Yongbyon nuclear complex which is north of North Korea's capital Pyongyang.
+(z1 / state-01
+      :ARG0 (z2 / source)
+      :ARG1 (z3 / focus-01
+            :ARG0 (z4 / inspect-01)
+            :ARG2 (z5 / laboratory
+                  :ARG0-of (z6 / produce-01
+                        :ARG1 (z7 / isotope))
+                  :location (z8 / complex
+                        :name (z9 / name
+                              :op1 "Yongbyon")
+                        :mod (z10 / nucleus)
+                        :location (z11 / relative-position
+                              :op1 (z12 / city
+                                    :name (z13 / name
+                                          :op1 "Pyongyang")
+                                    :ARG0-of (z14 / have-org-role-91
+                                          :ARG1 (z15 / country
+                                                :name (z16 / name
+                                                      :op1 "North"
+                                                      :op2 "Korea"))
+                                          :ARG2 (z17 / capital)))
+                              :direction (z18 / north))))))
+
+# ::cluster_id 2 ::id 16
+# ::snt  The IAEA tour of the isotope production laboratory will unlikely give a full picture of North Korea's suspected nuclear weapons ambitions.
+(z1 / likely-01
+      :polarity -
+      :ARG1 (z2 / give-01
+            :ARG0 (z3 / tour-01
+                  :ARG0 (z4 / organization
+                        :name (z5 / name
+                              :op1 "IAEA"))
+                  :ARG1 (z6 / laboratory
+                        :ARG0-of (z7 / produce-01
+                              :ARG1 (z8 / isotope))))
+            :ARG1 (z9 / picture
+                  :mod (z10 / full)
+                  :topic (z11 / ambition
+                        :mod (z12 / weapon
+                              :mod (z13 / nucleus))
+                        :ARG1-of (z14 / suspect-01)
+                        :poss (z15 / country
+                              :name (z16 / name
+                                    :op1 "North"
+                                    :op2 "Korea"))))))
+
+# ::cluster_id 2 ::id 17
+# ::snt  The tour was a surprise offer made by North Korea in November 2001.
+(z1 / offer-01
+      :ARG0 (z2 / country
+            :name (z3 / name
+                  :op1 "North"
+                  :op2 "Korea"))
+      :ARG1 (z4 / tour-01)
+      :ARG0-of (z5 / surprise-01)
+      :time (z6 / date-entity
+            :month 11
+            :year 2001))
+
+# ::cluster_id 2 ::id 18
+# ::snt  IAEA accepted North Korea's proposal last month but cautioned that the proposal is not a breakthrough.
+(z1 / contrast-01
+      :ARG1 (z2 / accept-01
+            :ARG0 (z3 / organization
+                  :name (z4 / name
+                        :op1 "IAEA"))
+            :ARG1 (z5 / thing
+                  :ARG1-of (z6 / propose-01
+                        :ARG0 (z7 / country
+                              :name (z8 / name
+                                    :op1 "North"
+                                    :op2 "Korea"))))
+            :time (z9 / month
+                  :mod (z10 / last))))
+
+# ::cluster_id 2 ::id 19
+# ::snt  IAEA also stated the lab is not one of the frozen facilities it wants to look into.
+(z1 / state-01
+      :ARG0 (z2 / organization
+            :name (z3 / name
+                  :op1 "IAEA"))
+      :ARG1 (z4 / include-91
+            :polarity -
+            :ARG1 (z5 / lab)
+            :ARG2 (z6 / facility
+                  :ARG1-of (z7 / freeze-01)
+                  :ARG1-of (z8 / look-into-11
+                        :ARG0 z2
+                        :ARG1-of (z9 / want-01
+                              :ARG0 z2))))
+      :mod (z10 / also))
+
+# ::cluster_id 2 ::id 20
+# ::snt  IAEA is based in Vienna and is the UN's nuclear supervisor.
+(z1 / and
+      :op1 (z2 / base-01
+            :ARG1 (z3 / organization
+                  :name (z4 / name
+                        :op1 "IAEA"))
+            :location (z5 / city
+                  :name (z6 / name
+                        :op1 "Vienna")))
+      :op2 (z7 / supervise-01
+            :ARG0 z3
+            :ARG1 (z8 / organization
+                  :name (z9 / name
+                        :op1 "UN"))
+            :topic (z10 / nucleus)))
+
+# ::cluster_id 2 ::id 21
+# ::snt  North Korea has denied the IAEA full access to its facilities.
+(z1 / deny-01
+      :ARG0 (z2 / country
+            :name (z3 / name
+                  :op1 "North"
+                  :op2 "Korea"))
+      :ARG1 (z4 / access-01
+            :ARG0 (z5 / organization
+                  :name (z6 / name
+                        :op1 "IAEA"))
+            :ARG1 (z7 / facility
+                  :poss z2)
+            :mod (z8 / full))
+      :ARG2 z5)
+
+# ::cluster_id 2 ::id 22
+# ::snt  North Korea froze its suspected nuclear weapons program at Yongbyon in exchange for receiving two nuclear reactors producing less weapons-grade plutonium under a 1994 accord with the United States.
+(z1 / freeze-02
+      :ARG0 (z2 / country
+            :name (z3 / name
+                  :op1 "North"
+                  :op2 "Korea"))
+      :ARG1 (z4 / program
+            :topic (z5 / weapon
+                  :mod (z6 / nucleus))
+            :ARG1-of (z7 / suspect-01)
+            :location (z8 / county
+                  :name (z9 / name
+                        :op1 "Yongbyon")))
+      :ARG1-of (z10 / exchange-01
+            :ARG0 z2
+            :ARG2 (z11 / country
+                  :name (z12 / name
+                        :op1 "United"
+                        :op2 "States"))
+            :ARG3 (z13 / receive-01
+                  :ARG0 z2
+                  :ARG1 (z14 / reactor
+                        :quant 2
+                        :mod z6
+                        :ARG0-of (z15 / produce-01
+                              :ARG1 (z16 / plutonium
+                                    :mod (z17 / weapons-grade)
+                                    :mod (z18 / less))))
+                  :prep-under (z19 / accord-03
+                        :ARG0 z2
+                        :ARG2 z11
+                        :time (z20 / date-entity
+                              :year 1994)))))
+
+# ::cluster_id 2 ::id 23
+# ::snt  The 4.6-billion-dollar project was due to be completed by 2003.
+(z1 / due-03
+      :ARG1 (z2 / project
+            :mod (z3 / monetary-quantity
+                  :quant 4600000000
+                  :unit (z4 / dollar)))
+      :ARG2 (z5 / complete-01
+            :ARG1 z2)
+      :time (z6 / by
+            :op1 (z7 / date-entity
+                  :year 2003)))
+
+# ::cluster_id 2 ::id 24
+# ::snt  Delays have pushed back the finish until at least 2008.
+(z1 / push-01
+      :ARG0 (z2 / delay-01)
+      :ARG1 (z3 / finish-01)
+      :ARG2 (z4 / back)
+      :time (z5 / until
+            :op1 (z6 / at-least
+                  :op1 (z7 / date-entity
+                        :year 2008))))
+
+# ::cluster_id 2 ::id 25
+# ::snt  Pyongyang insists it will allow full IAEA inspections only when a significant portion of the project as defined in the 1994 accord is completed.
+(z1 / insist-01
+      :ARG0 (z2 / city
+            :name (z3 / name
+                  :op1 "Pyongyang"))
+      :ARG1 (z4 / allow-01
+            :ARG0 z2
+            :ARG1 (z5 / inspect-01
+                  :ARG0 (z6 / organization
+                        :name (z7 / name
+                              :op1 "IAEA"))
+                  :mod (z8 / full))
+            :time (z9 / complete-01
+                  :ARG1 (z10 / portion
+                        :ARG1-of (z11 / significant-02)
+                        :part-of (z12 / project)
+                        :ARG1-of (z13 / define-01
+                              :ARG0 (z14 / accord-03
+                                    :time (z15 / date-entity
+                                          :year 1994)))))
+            :mod (z16 / only)))
+

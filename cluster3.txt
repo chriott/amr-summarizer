@@ -1,0 +1,662 @@
+# ::cluster_id 3 ::id 26
+# ::snt South Koreans rallied on January 11, 2002 in support of their right to eat dog meat.
+(z1 / rally-01
+      :ARG1 (z2 / person
+            :source (z3 / country
+                  :name (z4 / name
+                        :op1 "South"
+                        :op2 "Korea")))
+      :ARG2 (z5 / support-01
+            :ARG0 z2
+            :ARG1 (z6 / right-05
+                  :ARG1 z2
+                  :ARG2 (z7 / eat-01
+                        :ARG0 z2
+                        :ARG1 (z8 / meat
+                              :consist-of (z9 / dog)))))
+      :time (z10 / date-entity
+            :year 2002
+            :month 1
+            :day 11))
+
+# ::cluster_id 3 ::id 27
+# ::snt  They threatened an Internet war as part of a campaign to defend the traditional cuisine.
+(z1 / threaten-01
+      :ARG0 (z2 / they)
+      :ARG1 (z3 / war-01
+            :ARG0 z2
+            :ARG2 (z4 / internet)
+            :part-of (z5 / campaign-01
+                  :ARG0 z2
+                  :ARG1 (z6 / defend-01
+                        :ARG0 z2
+                        :ARG1 (z7 / cuisine
+                              :mod (z8 / traditional))))))
+
+# ::cluster_id 3 ::id 28
+# ::snt  A nationalist group has vowed cyber hostilities against U.S. based media company Warner Bros. and one of France's state-run television channels.
+(z1 / vow-01
+      :ARG0 (z2 / group
+            :mod (z3 / nationalist))
+      :ARG1 (z4 / hostility
+            :mod (z5 / cyber)
+            :prep-against (z6 / and
+                  :op1 (z7 / company
+                        :name (z8 / name
+                              :op1 "Warner"
+                              :op2 "Bros.")
+                        :mod (z9 / media)
+                        :ARG1-of (z10 / base-01
+                              :location (z11 / country
+                                    :name (z12 / name
+                                          :op1 "U.S."))))
+                  :op2 (z13 / channel
+                        :quant 1
+                        :ARG1-of (z14 / include-91
+                              :ARG2 (z15 / channel
+                                    :mod (z16 / television)
+                                    :ARG1-of (z17 / run-01
+                                          :ARG0 (z18 / state))))))))
+
+# ::cluster_id 3 ::id 29
+# ::snt  The activists accuse the organizations of being culturally-biased and insulting.
+(z1 / accuse-01
+      :ARG0 (z2 / activist)
+      :ARG1 (z3 / organization)
+      :ARG2 (z4 / and
+            :op1 (z5 / bias-01
+                  :ARG1 z3
+                  :manner (z6 / cultural))
+            :op2 (z7 / insult-01
+                  :ARG0 z3)))
+
+# ::cluster_id 3 ::id 30
+# ::snt  A South Korean group has announced a campaign backed by food scientists to promote the eating of dog meat.
+(z1 / announce-01
+      :ARG0 (z2 / group
+            :mod (z3 / country
+                  :name (z4 / name
+                        :op1 "South"
+                        :op2 "Korea")))
+      :ARG1 (z5 / campaign-01
+            :ARG1 (z6 / promote-02
+                  :ARG1 (z7 / eat-01
+                        :ARG1 (z8 / meat
+                              :consist-of (z9 / dog))))
+            :ARG1-of (z10 / back-01
+                  :ARG0 (z11 / scientist
+                        :mod (z12 / food)))))
+
+# ::cluster_id 3 ::id 31
+# ::snt  This announcement was in response to increasing foreign criticism of the way dogs are slaughtered in South Korea.
+(z1 / respond-01
+      :ARG0 (z2 / thing
+            :ARG1-of (z3 / announce-01)
+            :mod (z4 / this))
+      :ARG1 (z5 / increase-01
+            :ARG1 (z6 / criticize-01
+                  :ARG0 (z7 / foreign)
+                  :ARG1 (z8 / slaughter-01
+                        :ARG1 (z9 / dog)
+                        :location (z10 / country
+                              :name (z11 / name
+                                    :op1 "South"
+                                    :op2 "Korea"))))))
+
+# ::cluster_id 3 ::id 32
+# ::snt  The killing of dogs for restaurants has become a more popular topic than the football World Cup finals.
+(z1 / become-01
+      :ARG1 (z2 / kill-01
+            :ARG1 (z3 / dog)
+            :beneficiary (z4 / restaurant))
+      :ARG2 (z5 / topic
+            :ARG1-of (z6 / have-degree-91
+                  :ARG2 (z7 / popular-02
+                        :ARG1 z5)
+                  :ARG3 (z8 / more)
+                  :ARG4 (z9 / final
+                        :subevent-of (z10 / game
+                              :name (z11 / name
+                                    :op1 "World"
+                                    :op2 "Cup")
+                              :mod (z12 / football))))))
+
+# ::cluster_id 3 ::id 33
+# ::snt  The World Cup finals are to be co-hosted by South Korea and Japan this year.
+(z1 / host-01
+      :ARG0 (z2 / and
+            :op1 (z3 / country
+                  :name (z4 / name
+                        :op1 "South"
+                        :op2 "Korea"))
+            :op2 (z5 / country
+                  :name (z6 / name
+                        :op1 "Japan")))
+      :ARG1 (z7 / final
+            :subevent-of (z8 / game
+                  :name (z9 / name
+                        :op1 "World"
+                        :op2 "Cup")))
+      :time (z10 / year
+            :mod (z11 / this)))
+
+# ::cluster_id 3 ::id 34
+# ::snt  The debate was partly fueled by FIFA, football's international governing body.
+(z1 / fuel-01
+      :ARG0 (z2 / organization
+            :name (z3 / name
+                  :op1 "FIFA")
+            :mod (z4 / body
+                  :ARG0-of (z5 / govern-01
+                        :ARG1 (z6 / football))
+                  :mod (z7 / international)))
+      :ARG1 (z8 / debate-01)
+      :degree (z9 / part))
+
+# ::cluster_id 3 ::id 35
+# ::snt  FIFA urged South Korea to prevent the inhumane killing of dogs.
+(z1 / urge-01
+      :ARG0 (z2 / organization
+            :name (z3 / name
+                  :op1 "FIFA"))
+      :ARG1 (z4 / country
+            :name (z5 / name
+                  :op1 "South"
+                  :op2 "Korea"))
+      :ARG2 (z6 / prevent-01
+            :ARG0 z4
+            :ARG1 (z7 / kill-01
+                  :ARG1 (z8 / dog)
+                  :manner (z9 / humane
+                        :polarity -))))
+
+# ::cluster_id 3 ::id 36
+# ::snt  South Koreans are angered by the international pressure on their traditional cuisine.
+(z1 / anger-01
+      :ARG0 (z2 / pressure-01
+            :ARG1 (z3 / cuisine
+                  :mod (z4 / traditional)
+                  :poss (z5 / person
+                        :source (z6 / country
+                              :name (z7 / name
+                                    :op1 "South"
+                                    :op2 "Korea"))))
+            :mod (z8 / international))
+      :ARG1 z5)
+
+# ::cluster_id 3 ::id 37
+# ::snt  The organizers of South Korean website antijapan.wo.ro vowed to paralyze the websites of Warner Bros. (www.wpix.com) and the French state television network (www.francetv.fr) on January 19, 2002.
+(z1 / vow-01
+      :ARG0 (z2 / person
+            :ARG0-of (z3 / organize-01
+                  :ARG1 (z4 / url-entity
+                        :value "antijapan.wo.ro"
+                        :domain (z5 / website
+                              :source (z6 / country
+                                    :name (z7 / name
+                                          :op1 "South"
+                                          :op2 "Korea"))))))
+      :ARG1 (z8 / paralyze-01
+            :ARG0 z2
+            :ARG1 (z9 / and
+                  :op1 (z10 / url-entity
+                        :value "www.wpix.com"
+                        :domain (z11 / website
+                              :poss (z12 / company
+                                    :name (z13 / name
+                                          :op1 "Warner"
+                                          :op2 "Bros."))))
+                  :op2 (z14 / url-entity
+                        :value "www.fr"
+                        :domain (z15 / website
+                              :poss (z16 / network
+                                    :mod (z17 / television)
+                                    :mod (z18 / state)
+                                    :mod (z19 / country
+                                          :name (z20 / name
+                                                :op1 "France"))))))
+            :time (z21 / date-entity
+                  :year 2002
+                  :month 1
+                  :day 19)))
+
+# ::cluster_id 3 ::id 38
+# ::snt  The organizers of the South Korean website accused the broadcasters of falsely describing South Koreans and their food culture as barbaric.
+(z1 / accuse-01
+      :ARG0 (z2 / person
+            :ARG0-of (z3 / organize-01
+                  :ARG1 (z4 / website
+                        :mod (z5 / country
+                              :name (z6 / name
+                                    :op1 "South"
+                                    :op2 "Korea")))))
+      :ARG1 (z7 / person
+            :ARG0-of (z8 / broadcast-01))
+      :ARG2 (z9 / describe-01
+            :ARG0 z7
+            :ARG1 (z10 / and
+                  :op1 (z11 / person
+                        :mod z5)
+                  :op2 (z12 / culture
+                        :mod (z13 / food)
+                        :poss z11))
+            :ARG2 (z14 / barbaric)
+            :manner (z15 / false)))
+
+# ::cluster_id 3 ::id 39
+# ::snt  The anti-Japan group stated that South Korean culture is under attack.
+(z1 / state-01
+      :ARG0 (z2 / group
+            :ARG0-of (z3 / oppose-01
+                  :ARG1 (z4 / country
+                        :name (z5 / name
+                              :op1 "Japan"))))
+      :ARG1 (z6 / attack-01
+            :ARG1 (z7 / culture
+                  :mod (z8 / country
+                        :name (z9 / name
+                              :op1 "South"
+                              :op2 "Korea")))))
+
+# ::cluster_id 3 ::id 40
+# ::snt  The statement was made to gain supporters to join the lobbying.
+(z1 / have-purpose-91
+      :ARG1 (z2 / state-01)
+      :ARG2 (z3 / gain-02
+            :ARG1 (z4 / person
+                  :ARG0-of (z5 / support-01))
+            :purpose (z6 / join-01
+                  :ARG0 z4
+                  :ARG1 (z7 / lobby-01))))
+
+# ::cluster_id 3 ::id 41
+# ::snt  Cyber warfare has become a common weapon for South Koreans.
+(z1 / become-01
+      :ARG1 (z2 / warfare
+            :mod (z3 / cyber))
+      :ARG2 (z4 / weapon
+            :mod (z5 / common)
+            :poss (z6 / person
+                  :source (z7 / country
+                        :name (z8 / name
+                              :op1 "South"
+                              :op2 "Korea")))))
+
+# ::cluster_id 3 ::id 42
+# ::snt  They are one of the most Internet savvy nations in the world.
+(z1 / include-91
+      :ARG1 (z2 / they)
+      :ARG2 (z3 / nation
+            :ARG1-of (z4 / have-degree-91
+                  :ARG2 (z5 / savvy-01
+                        :ARG0 z3
+                        :ARG1 (z6 / internet))
+                  :ARG3 (z7 / most)
+                  :ARG5 (z8 / world))))
+
+# ::cluster_id 3 ::id 43
+# ::snt  South Korean cyber campaigners disabled Japanese education ministry websites last year in a protest against history books accused of skimming Japan's wartime record in Asia.
+(z1 / disable-01
+      :ARG0 (z2 / person
+            :ARG0-of (z3 / campaign-01
+                  :mod (z4 / cyber))
+            :mod (z5 / country
+                  :name (z6 / name
+                        :op1 "South"
+                        :op2 "Korea")))
+      :ARG1 (z7 / website
+            :poss (z8 / ministry
+                  :topic (z9 / educate-01)
+                  :mod (z10 / country
+                        :name (z11 / name
+                              :op1 "Japan"))))
+      :time (z12 / year
+            :mod (z13 / last))
+      :purpose (z14 / protest-01
+            :ARG0 z2
+            :ARG1 (z15 / book
+                  :mod (z16 / history)
+                  :ARG1-of (z17 / accuse-01
+                        :ARG2 (z18 / skim-01
+                              :ARG0 z15
+                              :ARG1 (z19 / record
+                                    :mod (z20 / wartime)
+                                    :poss z10)
+                              :location (z21 / continent
+                                    :name (z22 / name
+                                          :op1 "Asia")))))))
+
+# ::cluster_id 3 ::id 44
+# ::snt  The nationalist group was formed to campaign against Japan.
+(z1 / form-01
+      :ARG1 (z2 / group
+            :mod (z3 / nationalist))
+      :purpose (z4 / campaign-01
+            :ARG0 z2
+            :ARG1 (z5 / against
+                  :op1 (z6 / country
+                        :name (z7 / name
+                              :op1 "Japan")))))
+
+# ::cluster_id 3 ::id 45
+# ::snt  The group said the foreign broadcasters are battering the eating dogmeat culture and that it is insulting behavior.
+(z1 / say-01
+      :ARG0 (z2 / group)
+      :ARG1 (z3 / and
+            :op1 (z4 / batter-01
+                  :ARG0 (z5 / person
+                        :ARG0-of (z6 / broadcast-01)
+                        :mod (z7 / foreign))
+                  :ARG1 (z8 / culture
+                        :mod (z9 / eat-01
+                              :ARG1 (z10 / meat
+                                    :consist-of (z11 / dog)))))
+            :op2 (z12 / behave-01
+                  :ARG0 z5
+                  :ARG1 (z13 / insult-01
+                        :ARG0 z5))))
+
+# ::cluster_id 3 ::id 46
+# ::snt  It tramples on a tradition of one country.
+(z1 / trample-01
+      :ARG0 (z2 / it)
+      :ARG1 (z3 / tradition
+            :poss (z4 / country
+                  :quant 1)))
+
+# ::cluster_id 3 ::id 47
+# ::snt  The group said the foreign broadcasters do not show any remorse for their culture of eating snails and horses.
+(z1 / say-01
+      :ARG0 (z2 / group)
+      :ARG1 (z3 / show-01
+            :polarity -
+            :ARG0 (z4 / person
+                  :ARG0-of (z5 / broadcast-01)
+                  :mod (z6 / foreign))
+            :ARG1 (z7 / remorse
+                  :mod (z8 / any)
+                  :topic (z9 / culture
+                        :poss z4
+                        :mod (z10 / eat-01
+                              :ARG1 (z11 / and
+                                    :op1 (z12 / snail)
+                                    :op2 (z13 / horse)))))))
+
+# ::cluster_id 3 ::id 48
+# ::snt  The cyber attack is to show the power of South Koreans and Asians against the West's sense of superiority and ignorance of South Korea's history.
+(z1 / have-purpose-91
+      :ARG1 (z2 / attack-01
+            :mod (z3 / cyber))
+      :ARG2 (z4 / show-01
+            :ARG1 (z5 / power
+                  :poss (z6 / and
+                        :op1 (z7 / person
+                              :mod (z8 / country
+                                    :name (z9 / name
+                                          :op1 "South"
+                                          :op2 "Korea")))
+                        :op2 (z10 / person
+                              :mod (z11 / continent
+                                    :name (z12 / name
+                                          :op1 "Asia"))))
+                  :prep-against (z13 / and
+                        :op1 (z14 / sense-01
+                              :ARG0 (z15 / world-region
+                                    :name (z16 / name
+                                          :op1 "West"))
+                              :ARG1 (z17 / superior-01
+                                    :ARG1 z15))
+                        :op2 (z18 / ignorance
+                              :topic (z19 / history
+                                    :poss z8))))))
+
+# ::cluster_id 3 ::id 49
+# ::snt  Another group said they will launch an association next Monday of around 100 dog meat restaurant owners in the Seoul region and hold a seminar to promote the dish.
+(z1 / say-01
+      :ARG0 (z2 / group
+            :mod (z3 / another))
+      :ARG1 (z4 / and
+            :op1 (z5 / launch-01
+                  :ARG0 z2
+                  :ARG1 (z6 / association
+                        :consist-of (z7 / person
+                              :ARG0-of (z8 / own-01
+                                    :ARG1 (z9 / restaurant
+                                          :mod (z10 / meat
+                                                :consist-of (z11 / dog))))
+                              :quant (z12 / around
+                                    :op1 100)
+                              :location (z13 / region
+                                    :mod (z14 / city
+                                          :name (z15 / name
+                                                :op1 "Seoul")))))
+                  :time (z16 / date-entity
+                        :weekday (z17 / monday)
+                        :mod (z18 / next))))
+      :op2 (z19 / hold-04
+            :ARG0 z2
+            :ARG1 (z20 / seminar
+                  :purpose (z21 / promote-01
+                        :ARG0 z2
+                        :ARG1 z10))))
+
+# ::cluster_id 3 ::id 50
+# ::snt  Food scientist at Chung Chong College an Yong-geun said he would introduce some 350 different kinds of culinary art with dog meat.
+(z1 / say-01
+      :ARG0 (z2 / person
+            :name (z3 / name
+                  :op1 "An"
+                  :op2 "Yong-geun")
+            :ARG0-of (z4 / have-org-role-91
+                  :ARG1 (z5 / university
+                        :name (z6 / name
+                              :op1 "Chung"
+                              :op2 "Chong"
+                              :op3 "College"))
+                  :ARG2 (z7 / scientist
+                        :topic (z8 / food)))))
+
+# ::cluster_id 3 ::id 51
+# ::snt  French actress-turned activist Brigitte Bardot and other animal rights campaigners call to stop the South Korean practice of eating dogs.
+(z1 / call-03
+      :ARG0 (z2 / and
+            :op1 (z3 / person
+                  :name (z4 / name
+                        :op1 "Brigitte"
+                        :op2 "Bardot")
+                  :mod (z5 / country
+                        :name (z6 / name
+                              :op1 "France"))
+                  :ARG1-of (z7 / turn-02
+                        :ARG2 (z8 / activist)
+                        :ARG3 (z9 / actress)))
+            :op2 (z10 / person
+                  :ARG0-of (z11 / campaign-01
+                        :ARG1 (z12 / right-05
+                              :ARG1 (z13 / animal)))
+                  :mod (z14 / other))))
+
+# ::cluster_id 3 ::id 52
+# ::snt  FIFA president Sepp Blatter sent a letter last November to South Korea's World Cup organizing committee calling for immediate and decisive measures against cruelty to dogs.
+(z1 / send-01
+      :ARG0 (z2 / person
+            :name (z3 / name
+                  :op1 "Sepp"
+                  :op2 "Blatter")
+            :ARG0-of (z4 / have-org-role-91
+                  :ARG1 (z5 / organization
+                        :name (z6 / name
+                              :op1 "FIFA"))
+                  :ARG2 (z7 / president))))
+
+# ::cluster_id 3 ::id 53
+# ::snt  It was ahead of the World Cup which starts May 31, 2002.
+(z1 / be-temporally-at-91
+      :ARG1 (z2 / it)
+      :ARG2 (z3 / ahead
+            :op1 (z4 / game
+                  :name (z5 / name
+                        :op1 "World"
+                        :op2 "Cup")
+                  :ARG1-of (z6 / start-01
+                        :time (z7 / date-entity
+                              :year 2002
+                              :month 5
+                              :day 31)))))
+
+# ::cluster_id 3 ::id 54
+# ::snt  Head of the Korean Football Association and a FIFA vice president Chung Mong-Joon said FIFA should not intervene in the eating habits of a sovereign nation.
+(z1 / say-01
+      :ARG0 (z2 / person
+            :name (z3 / name
+                  :op1 "Chung"
+                  :op2 "Mong-Joon")
+            :ARG0-of (z4 / head-01
+                  :ARG1 (z5 / organization
+                        :name (z6 / name
+                              :op1 "Korean"
+                              :op2 "Football"
+                              :op3 "Association")))
+            :ARG0-of (z7 / have-org-role-91
+                  :ARG1 (z8 / organization
+                        :name (z9 / name
+                              :op1 "FIFA"))
+                  :ARG2 (z10 / president
+                        :mod (z11 / vice)))))
+
+# ::cluster_id 3 ::id 55
+# ::snt  South Korean officials said most dogs used for eating were killed instantly by electrocution.
+(z1 / say-01
+      :ARG0 (z2 / person
+            :ARG0-of (z3 / have-org-role-91
+                  :ARG1 (z4 / country
+                        :name (z5 / name
+                              :op1 "South"
+                              :op2 "Korea"))
+                  :ARG2 (z6 / official)))
+      :ARG1 (z7 / kill-01
+            :ARG1 (z8 / dog
+                  :quant (z9 / most)
+                  :ARG1-of (z10 / use-01
+                        :ARG2 (z11 / eat-01)))
+            :manner (z12 / electrocute-00
+                  :ARG1 z8)
+            :manner (z13 / instant)))
+
+# ::cluster_id 3 ::id 56
+# ::snt  Activists contend many slaughterhouses in the countryside are not controlled.
+(z1 / contend-01
+      :ARG0 (z2 / activist)
+      :ARG1 (z3 / control-01
+            :polarity -
+            :ARG1 (z4 / slaughterhouse
+                  :quant (z5 / many)
+                  :location (z6 / countryside))))
+
+# ::cluster_id 3 ::id 57
+# ::snt  They strangle dogs, hang them by a rope and beat them in line with traditional practice to make the meat more tender.
+(z1 / and
+      :op1 (z2 / strangle-01
+            :ARG0 (z3 / they)
+            :ARG1 (z4 / dog))
+      :op2 (z5 / hang-01
+            :ARG0 z3
+            :ARG1 z4
+            :instrument (z6 / rope))
+      :op3 (z7 / beat-01
+            :ARG0 z3
+            :ARG1 z4
+            :ARG1-of (z8 / in-line-04
+                  :ARG2 (z9 / practice-01
+                        :ARG0 (z10 / traditional))))
+      :purpose (z11 / make-02
+            :ARG0 z3
+            :ARG1 (z12 / tender-02
+                  :ARG1 (z13 / meat)
+                  :ARG2-of (z14 / have-degree-91
+                        :ARG1 z13
+                        :ARG3 (z15 / more)))))
+
+# ::cluster_id 3 ::id 58
+# ::snt  Dog restaurants were told to close or go into the backstreets when Seoul hosted the 1988 Olympics.
+(z1 / tell-01
+      :ARG1 (z2 / or
+            :op1 (z3 / close-01
+                  :ARG1 (z4 / restaurant
+                        :mod (z5 / dog)))
+            :op2 (z6 / go-02
+                  :ARG0 z4
+                  :ARG4 (z7 / backstreet)))
+      :ARG2 z4
+      :time (z8 / host-01
+            :ARG0 (z9 / city
+                  :name (z10 / name
+                        :op1 "Seoul"))
+            :ARG1 (z11 / game
+                  :name (z12 / name
+                        :op1 "Olympics")
+                  :time (z13 / date-entity
+                        :year 1988))))
+
+# ::cluster_id 3 ::id 59
+# ::snt  No similar move is planned for the World Cup.
+(z1 / plan-01
+      :polarity -
+      :ARG1 (z2 / move-02
+            :ARG2 (z3 / game
+                  :name (z4 / name
+                        :op1 "World"
+                        :op2 "Cup"))
+            :ARG1-of (z5 / resemble-01)))
+
+# ::cluster_id 3 ::id 60
+# ::snt  The authorities say the practice is slowly disappearing in Korea.
+(z1 / say-01
+      :ARG0 (z2 / authority)
+      :ARG1 (z3 / disappear-01
+            :ARG1 (z4 / practice-01)
+            :ARG1-of (z5 / slow-05)
+            :location (z6 / country
+                  :name (z7 / name
+                        :op1 "Korea"))))
+
+# ::cluster_id 3 ::id 61
+# ::snt  A recent survey stated that about one million dogs are sold every year for food in South Korea and 92 percent of men aged 20 and above and 68 percent of adult women have tasted dog meat.
+(z1 / state-01
+      :ARG0 (z2 / survey-01
+            :time (z3 / recent))
+      :ARG1 (z4 / and
+            :op1 (z5 / sell-01
+                  :ARG1 (z6 / dog
+                        :quant (z7 / about
+                              :op1 1000000))
+                  :purpose (z8 / eat-01
+                        :ARG1 z6)
+                  :frequency (z9 / rate-entity-91
+                        :ARG2 (z10 / temporal-quantity
+                              :quant 1
+                              :unit (z11 / year)))
+                  :location (z12 / country
+                        :name (z13 / name
+                              :op1 "South"
+                              :op2 "Korea")))
+            :op2 (z14 / taste-01
+                  :ARG0 (z15 / and
+                        :op1 (z16 / man
+                              :ARG1-of (z17 / include-91
+                                    :ARG2 (z18 / man
+                                          :age (z19 / at-least
+                                                :op1 (z20 / temporal-quantity
+                                                      :quant 20
+                                                      :unit (z21 / year))))
+                                    :ARG3 (z22 / percentage-entity
+                                          :value 92)))
+                        :op2 (z23 / woman
+                              :ARG1-of (z24 / include-91
+                                    :ARG2 (z25 / woman
+                                          :mod (z26 / adult))
+                                    :ARG3 (z27 / percentage-entity
+                                          :value 68))))
+                  :ARG1 (z28 / meat
+                        :consist-of z6))))
+
