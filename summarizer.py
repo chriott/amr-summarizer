@@ -1,6 +1,6 @@
 import re
 
-def summarizer(AMRs, coreferences, n):
+def summarizer(original_AMRs, coreferences, n):
 	"""
 	Outputs a summary given an article in MSAMR format and its
 	resolved coreferences.
@@ -32,14 +32,19 @@ def summarizer(AMRs, coreferences, n):
 	# will have the highest scores. Size of the summary is scaled
 	# based on n, such that every n sentences in the text will result
 	# in 1 additional sentence in the summary
-	summary_AMRs = AMRs_sorted[:len(AMRs_sorted)//n]
+	summary_AMRs = AMRs_sorted[:len(original_AMRs)//n]
+
+	# Create output using indexes from summary AMRs on the original
+	# AMRs, and sort based on position in article
+	output = [original_AMRs[index-1] for index in summary_AMRs]
+	output.sort()
 
 	# Return selected AMRs as the summary
-	return summary_AMRs
+	return output
 
 # Test input
 AMRs = ["AMR_1", "AMR_2", "AMR_3", "AMR_4", "AMR_5"]
-coreferences = {"concept_1": [(1, "a"), (2, "g"), (2, "b2"), (4, "c"), (5, "p")], "concept_2": [(2, "l1"), (5, "j")]}
+coreferences = {"concept_1": [(1, "a"), (2, "g"), (3, "b2"), (5, "c"), (5, "p")], "concept_2": [(2, "l1"), (5, "j")]}
 n = 2
 
 summary_AMRs = summarizer(AMRs, coreferences, n)
