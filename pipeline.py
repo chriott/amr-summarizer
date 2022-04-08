@@ -29,10 +29,10 @@ def summarize(file):
     # Parse the sentences, convert output list into
     # string of AMRs separated by double new lines
     parser_output = stog.parse_sents(sentences)
-    AMRs = "# ::id 1\n"
-    id=2
+    AMRs = ""
+    id=1
     for amr in parser_output:
-        AMRs += "\n\n# ::id" + str(id) + "\n" + amr
+        AMRs += "\n\n# ::id " + str(id) + "\n" + amr
         id += 1
 
     # Write the AMRs to an output file

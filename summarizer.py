@@ -1,10 +1,12 @@
 import re
 
-def summarizer(full_AMR_text, coreferences, n):
+def summarizer(amr_file, coreferences, n):
 	"""
 	Outputs a summary given an article in MSAMR format and its
 	resolved coreferences.
 	"""
+	with open(amr_file, encoding='utf-8') as f:
+		full_AMR_text = f.read()
 
 	# Create dictionary to store each AMR and its score
 	AMR_scores = {}
