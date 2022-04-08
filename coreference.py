@@ -38,7 +38,7 @@ def print_list_of_strings(items, col_w, max_w):
     if cur_len != 0:
         print()
 
-if __name__ == '__main__':
+def resolve_coreferences(file):
     model_dir = 'amr_coref/data/model_coref-v0.1.0/'
 
     # Load the model and test data
@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     # Get test data
     print('Loading test data')
-    ordered_pgraphs = gather_test_graphs(sys.argv[1])
+    ordered_pgraphs = gather_test_graphs(file)
 
     # Cluster the data
     # This returns cluster_dict[relation_string] = [(graph_idx, variable), ...]
@@ -57,8 +57,4 @@ if __name__ == '__main__':
 
 
     # Print out the clusters
-    print('Clusters')
-    for relation, clusters in cluster_dict.items():
-        print(relation)
-        cid_strings = ['%d.%s' % (graph_idx, var) for (graph_idx, var) in clusters]
-        print_list_of_strings(cid_strings, col_w=8, max_w=120)
+    return cluster_dict
