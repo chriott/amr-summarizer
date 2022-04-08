@@ -26,11 +26,17 @@ def summarize(file):
     gtos = amrlib.load_gtos_model(model_dir=g)
     print('Generator loaded.')
 
-    # Parse the sentences
+    # Parse the sentences, convert output list into
+    # string of AMRs separated by double new lines
     parser_output = stog.parse_sents(sentences)
+    AMRs = "\n\n".join(parser_output)
+
+    # Write the AMRs to an output file
+    with open("amrs.txt", "w") as o:
+        o.writelines(AMRs)
 
     # Coreference resolution
-    coreferences = coreference.resolve_coreferences(parser_output)
+    coreferences = coreference.resolve_coreferences("amrs.txt")
 
     # Summarization
     summary_AMRs = summarizer.summarizer(parser_output, coreferences, 4)
@@ -44,4 +50,4 @@ def summarize(file):
     with open("summary.txt", "w") as o:
         o.writelines(sents)
 
-summarize(sys.argv[1])
+summarize("navy_seal.txt")
