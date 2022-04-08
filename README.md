@@ -44,7 +44,7 @@ The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_co
 ! This dependency is not necessary if you are only using the 'baseline' version of the model.
 
 
-### Usage
+### Usage_old
 
 #### Running baseline.py
 
@@ -66,6 +66,13 @@ You will then be asked to choose how many sentences the summary should contain. 
 ```
 The summary will then be written to a file called 'summary.txt', which should appear in the folder containing your baseline.py file.
 
+### Usage_new
+
+#### Run pipeline.py
+
+```
+python pipeline.py textfile.txt
+```
 
 #### Running eval.py
 
