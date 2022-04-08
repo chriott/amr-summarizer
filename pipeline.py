@@ -29,13 +29,13 @@ def summarize(file):
     # Parse the sentences
     parser_output = stog.parse_sents(sentences)
 
-	# Coreference resolution
-	coreferences = resolve_coreferences(parser_output)
+    # Coreference resolution
+    coreferences = coreference.resolve_coreferences(parser_output)
 
-	# Summarization
-	summary_AMRs = summarizer.summarizer(parser_output, coreferences, 4)
+    # Summarization
+    summary_AMRs = summarizer.summarizer(parser_output, coreferences, 4)
 
-	# Rename variables
+    # Rename variables
 
     # Generate the sentences
     sents, _ = gtos.generate(summary_AMRs, disable_progress=False, use_tense=False)
