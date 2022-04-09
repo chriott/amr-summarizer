@@ -29,6 +29,7 @@ def summarize(file):
     # Parse the sentences, convert output list into
     # string of AMRs separated by double new lines
     parser_output = stog.parse_sents(sentences)
+    print(parser_output)
     AMRs = ""
     id=1
     for amr in parser_output:
@@ -43,7 +44,7 @@ def summarize(file):
     coreferences = coreference.resolve_coreferences("amrs.txt")
 
     # Summarization
-    summary_AMRs = summarizer.summarizer(parser_output, coreferences, 4)
+    summary_AMRs = summarizer.summarizer('amrs.txt', coreferences, 3)
 
     # Rename variables
 
