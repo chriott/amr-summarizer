@@ -51,15 +51,18 @@ def summarize(file, n=4):
     print('Generating summary...')
     summary_AMRs = summarizer.summarizer('amrs.txt', coreferences, n)
 
-    # Rename variables
+    # Rename concepts
 
     # Generate the sentences
     sents, _ = gtos.generate(summary_AMRs, disable_progress=False, use_tense=False)
 
     # Write the sentences to an output file
     with open("summary.txt", "w") as o:
-        o.writelines(sents)
+        for sent in sents:
+            o.write(sent)
     print('Done. Summary saved as \"summary.txt\".\n')
+
+    # Print out the summary
     print("Summary:")
     for sent in sents:
         print(sent)
