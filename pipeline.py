@@ -10,41 +10,46 @@ import sys
 import coreference
 import summarizer
 
-def summarize(file):
+def summarize(file, n=4):
 
     # Open file and save each sentence to a different line
     with open(file) as f:
         sentences = [sentence.rstrip() for sentence in f.readlines()]
 
     # Load the parser model.
+    print('Loading parser...')
     p = './model_parse_spring-v0_1_0'
     stog = amrlib.load_stog_model(model_dir=p)
-    print('Parser loaded.')
+    print('done')
 
     # Load the generator model.
+    print('Loading generator...')
     g = './model_generate_t5wtense-v0_1_0'
     gtos = amrlib.load_gtos_model(model_dir=g)
-    print('Generator loaded.')
+    print('done')
 
     # Parse the sentences, convert output list into
     # string of AMRs separated by double new lines
+    print('Parsing...')
     parser_output = stog.parse_sents(sentences)
-    print(parser_output)
     AMRs = ""
     id=1
     for amr in parser_output:
-        AMRs += "\n\n# ::id " + str(id) + "\n" + amr
+        AMRs += "# ::id " + str(id) + "\n" + amr + "\n\n"
         id += 1
 
     # Write the AMRs to an output file
     with open("amrs.txt", "w") as o:
         o.writelines(AMRs)
+    print('done')
 
     # Coreference resolution
+    print('Resolving coreference...')
     coreferences = coreference.resolve_coreferences("amrs.txt")
 
     # Summarization
-    summary_AMRs = summarizer.summarizer('amrs.txt', coreferences, 3)
+    print('Generating summary...')
+    summary_AMRs = summarizer.summarizer('amrs.txt', coreferences, n)
 
     # Rename variables
 
@@ -54,5 +59,17 @@ def summarize(file):
     # Write the sentences to an output file
     with open("summary.txt", "w") as o:
         o.writelines(sents)
+    print('Done. Summary saved as \"summary.txt\".\n')
+    print("Summary:")
+    for sent in sents:
+        print(sent)
 
-summarize("navy_seal.txt")
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        summarize(sys.argv[1])
+    elif len(sys.argv) == 3:
+        summarize(sys.argv[1], int(sys.argv[2]))
+    else:
+        file = input("Please enter an input file name:  ")
+        summarize(file)
+
