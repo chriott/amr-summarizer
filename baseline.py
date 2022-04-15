@@ -47,7 +47,7 @@ def summarize(file):
     sents, _ = gtos.generate(summary_AMRs, disable_progress=False, use_tense=False)
 
     # Write the sentences to an output file
-    with open("summary.txt", "w") as o:
+    with open("baseline_summary.txt", "w") as o:
         o.writelines(sents)
 
 
