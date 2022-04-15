@@ -14,7 +14,7 @@ There are several versions of each model. You will be prompted to choose between
 The SAMRY model will prompt you to choose between 'absolute' and 'relative'. Choosing 'absolute' will allow you to choose an absolute summary length of n sentences, and you will be prompted to choose a value for n. Choosing 'relative' will cause the generated summaries to have a length relative to the length of their source text. In this case, you will be prompted to choose a value for n, and your summary will be the length of the text divided by n.
 
 
-## Baseline
+## Running the baseline
 
 ### Requirements
 
@@ -22,7 +22,53 @@ Before running, you will need to install the following dependencies:
 
 1) amrlib
 ```
-pip3 install amrlib
+pip install amrlib
+```
+2) penman library
+```
+pip install penman
+```
+3) The pretrained spring parser and generator model. Download and un-tar the following models into the amr-summarizer folder, or into the folder containing the baseline.py file.
+
+| Name              	| Version 	| Date       	| Size  	| Score       	| DL 	|
+|-------------------	|---------	|------------	|-------	|-------------	|----	|
+| parse_spring      	| 0.1.0   	| 2021-11-25 	| 1.5GB 	| 83.5 SMATCH 	| [Link](https://github.com/bjascob/amrlib-models/releases/download/model_parse_spring-v0_1_0/model_parse_spring-v0_1_0.tar.gz)   	|
+| generate_t5wtense 	| 0.1.0   	| 2020-12-30 	| 787MB 	| 54/44 BLEU  	| [Link](https://github.com/bjascob/amrlib-models/releases/download/model_generate_t5wtense-v0_1_0/model_generate_t5wtense-v0_1_0.tar.gz)  	|
+
+You will need a stable internet connection to run these models in the code.
+
+
+### Usage
+
+#### Running baseline.py
+
+To run baseline.py, simply run the script with the file containing the text you would like to summarize as an argument:
+```
+python baseline.py textfile.txt
+```
+
+You will be prompted to choose between 'random' and 'first'. Choosing 'random' will cause the summarizer to use n random sentences from the input text as the summary. Choosing 'first' will cause the summarizer to use the n first sentences as the summary.
+```
+random
+```
+You will then be asked to choose how many sentences the summary should contain. Simply enter any integer:
+```
+2
+```
+The summary will then be written to a file called 'baseline_summary.txt', which should appear in the folder containing your baseline.py file.
+
+#### Running baseline_eval.py
+
+
+## Running SAMRY
+
+### Requirements
+
+Before running, you will need to install the following dependencies:
+
+1) amrlib
+```
+pip install amrlib
 ```
 2) penman library
 ```
@@ -45,32 +91,8 @@ git clone https://github.com/bjascob/amr_coref.git
 ```
 The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_coref/releases). To use the model create a ```data``` directory and un-tar the model in it.
 
-! This dependency is not necessary if you are only using the 'baseline' version of the model.
 
-
-### Usage_old
-
-#### Running baseline.py
-
-To run baseline.py, simply run the script with the file containing the text you would like to summarize as an argument:
-```
-python baseline.py textfile.txt
-```
-You will be prompted to choose which version of the summarization model to use. Simply enter 'baseline' into the command prompt:
-```
-baseline
-```
-You will be prompted to choose between 'random' and 'first'. Choosing 'random' will cause the summarizer to use n random sentences from the input text as the summary. Choosing 'first' will cause the summarizer to use the n first sentences as the summary.
-```
-random
-```
-You will then be asked to choose how many sentences the summary should contain. Simply enter any integer:
-```
-2
-```
-The summary will then be written to a file called 'summary.txt', which should appear in the folder containing your baseline.py file.
-
-### Usage_new
+### Usage
 
 #### Run pipeline.py
 
