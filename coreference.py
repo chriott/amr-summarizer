@@ -46,14 +46,11 @@ def resolve_coreferences(file):
     inference = Inference(model_dir)
 
     # Get test data
-    print('Loading test data')
     ordered_pgraphs = gather_test_graphs(file)
 
     # Cluster the data
     # This returns cluster_dict[relation_string] = [(graph_idx, variable), ...]
-    print('Clustering')
     cluster_dict = inference.coreference(ordered_pgraphs)
-    print(cluster_dict)
 
 
     # Print out the clusters
