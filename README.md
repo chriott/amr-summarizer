@@ -89,18 +89,39 @@ Currently, there is no pip install of amr_coref, so you will have to clone it:
 ```
 git clone https://github.com/bjascob/amr_coref.git
 ```
-The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_coref/releases). To use the model create a ```data``` directory and un-tar the model in it.
+Clone the above link directly into the folder containing pipeline.py.
+
+In order to use amr_coref, you will also have to download a pre-trained model and insert it into the right place in your directory.
+The pre-trained model can be downloaded [here](https://github.com/bjascob/amr_coref/releases). Go to this link and download the file 'model_coref-v0.1.0.tar.gz'.
+Then, navigate into your 'amr_coref' folder and create a directory there called ```data```.
+Insert the 'model_coref-v0.1.0.tar.gz' file into ```data``` and un-tar the model.
+
+For this model to run, you will have to make some modifications to its configurations.
+To do so, navigate to ```\amr-summarizer\amr_coref\data\model_coref-v0.1.0```. You should see a file called ```config.json```.
+Open ```config.json``` with your editor and change "device":"cuda" to "device":"cpu", as well as "num_workers": 4 to "num_workers": 0.
+
+You will need to make some modifications to the code itself as well.
+Navigate to amr_coref/amr_coref/coref/coref_featurizer.py. Then, comment out line 242 ('with Pool(processes=processes, maxtasksperchild=maxtpc) as pool:').
+Reduce the indent of lines 243-248 (until 'pbar.close()') by 1. Finally, change line 243 to 'for fdata in map(worker, idx_keys):'.
+
+
+In amr_coref_model:
+in line 249, add parameter map_location:
+model_dict = torch.load(os.path.join(model_dir, model_fn), map_location='cpu')
 
 
 ### Usage
 
-#### Run pipeline.py
+#### Running pipeline.py
+
+To run pipeline.py, simply enter the following command (note that you may need to use a different command for python, such as py or python3):
 
 ```
 python pipeline.py textfile.txt
 ```
 
-#### Running eval.py
+
+#### Running pipeline_eval.py
 
 
 To run eval.py, first install the ROUGE code and word2number
