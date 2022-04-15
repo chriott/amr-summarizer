@@ -1,16 +1,20 @@
-# AMR Summarization Model
+# SAMRY: Summarization with Abstract Meaning Representation made easY
 
 ### About
 
 This is an end-to-end AMR-based summarization model. It was created as part of the software project "Applications for AMR" by Lucia Donatelli at Saarland University.
 
-There are two files which each contain all versions of the summarization models: baseline.py and eval.py. 
-The implementation in baseline.py is suitable for practical purposes, and the implementation in eval.py is used to evaluate the quality of the summarization models.
-As input, baseline.py takes a .txt file containing an English text with each sentence on a separate line. It summarizes this text and outputs the summary into a file with the name 'summary.txt'. 
-eval.py takes a file from the proxy report section of the AMR bank corpus, which includes several news reports and their corresponding gold standard summary. It extracts and generates a summary of each news report, and then evaluates the quality of the generated summary compared to the gold standard. We use ROUGE-1, ROUGE-2 and ROUGE-L as our evaluation metrics. An evaluation of each summary is printed to the console, as well as the average scores over the whole corpus.
+There are four files which together contain all versions of the summarization models: baseline.py, baseline_eval.py, samry.py and samry_eval.py. 
+The implementation in baseline.py and in samry.py are suitable for practical purposes, and the implementation in baseline_eval.py and samry_eval.py are used to evaluate the quality of the summarization models. Please see our paper *link to paper* for information on how each algorithm works.
 
-There are several versions of the model. You will be prompted to choose between them when running the python script. The baseline model works by choosing n sentences from the original text and using these as the summary. In this version, you can have the model use either the first n sentences or choose n random sentences to use for the summary. You will also be prompted to choose the length of the summary in number of sentences.
+As input, baseline.py and samry.py take a .txt file containing an English text with each sentence on a separate line. They each summarize the text and output the summary into a file named 'baseline_summary.txt' or 'samry_summary.txt' respectively.
+baseline_eval.py and samry_eval.py take a file from the proxy report section of the AMR bank corpus, which includes several news reports and their corresponding gold standard summary. They extract each news report and generate a summary of each, and then they evaluate the quality of the generated summary compared to the gold standard. We use ROUGE-1, ROUGE-2 and ROUGE-L as our evaluation metrics. An evaluation of each summary is printed to the console, as well as the average scores over the whole corpus.
 
+There are several versions of each model. You will be prompted to choose between them when running the respective python script. The baseline model will prompt you to choose between 'first' and 'random' as well as choose an integer summary length. Choosing 'first' will cause the baseline model to use the first n sentences as a summary, and choosing 'random' will cause the baseline model to use n random sentences from the source text as the summary. N is the length of the desired summary in sentences.
+The SAMRY model will prompt you to choose between 'absolute' and 'relative'. Choosing 'absolute' will allow you to choose an absolute summary length of n sentences, and you will be prompted to choose a value for n. Choosing 'relative' will cause the generated summaries to have a length relative to the length of their source text. In this case, you will be prompted to choose a value for n, and your summary will be the length of the text divided by n.
+
+
+## Baseline
 
 ### Requirements
 
