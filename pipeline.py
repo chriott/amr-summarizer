@@ -57,10 +57,10 @@ def summarize(file, n=4):
     sents, _ = gtos.generate(summary_AMRs, disable_progress=False, use_tense=False)
 
     # Write the sentences to an output file
-    with open("summary.txt", "w") as o:
+    with open("pipeline_summary.txt", "w") as o:
         for sent in sents:
             o.write(sent)
-    print('Done. Summary saved as \"summary.txt\".\n')
+    print('Done. Summary saved as \"pipeline_summary.txt\".\n')
 
     # Print out the summary
     print("Summary:")
