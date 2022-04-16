@@ -153,4 +153,4 @@ Our baseline model achieves these results:
 | first 	|  2  	| precision: 0.5134 recall: 0.2922 fscore: 0.3536 	| precision: 0.3021 recall: 0.1653 fscore: 0.2034 	| precision: 0.4285 recall: 0.2417 fscore: 0.2937  	| 
 | random | 1 |  precision: 0.1964 recall: 0.2525 fscore: 0.2037 | precision: 0.0488 recall: 0.0761 fscore: 0.0555 | precision: 0.1532 recall: 0.2022 fscore: 0.1603 |
 | random | 2 | precision: 0.3059 recall: 0.1875 fscore: 0.2203 | precision: 0.0967 recall: 0.0585 fscore: 0.0685 | precision: 0.2258 recall: 0.1364 fscore: 0.1607 |
-| SAMRY | n | precision: 0.3059 recall: 0.1875 fscore: 0.2203 | precision: 0.0967 recall: 0.0585 fscore: 0.0685 | precision: 0.2258 recall: 0.1364 fscore: 0.1607 |
+| SAMRY | n | precision: 0.5603 recall: 0.1433 fscore: 0.2199 | precision: 0.2001 recall: 0.0449 fscore: 0.0706 | precision: 0.4031 recall: 0.0993 fscore: 0.1531 |
