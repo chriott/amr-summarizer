@@ -129,7 +129,7 @@ python pipeline.py textfile.txt
 #### Running pipeline_eval.py
 
 
-To run pipeline_eval.py, first install the ROUGE code and word2number:
+To run pipeline_eval.py, first install the ROUGE and word2number:
 ```
 pip install rouge_score
 pip install word2number
